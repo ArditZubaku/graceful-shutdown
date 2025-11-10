@@ -5,9 +5,12 @@ import (
 	"fmt"
 	"net/http"
 	"os/signal"
+	"sync"
 	"syscall"
 	"time"
 )
+
+var wg sync.WaitGroup
 
 func main() {
 	s := http.Server{
@@ -44,4 +47,8 @@ func main() {
 	} else {
 		fmt.Println("Successfully shut down the server!")
 	}
+
+	fmt.Println("Waiting for goroutines to finish...")
+	wg.Wait()
+	fmt.Println("Goroutines finished. Exiting...")
 }
