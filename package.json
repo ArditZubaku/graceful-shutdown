@@ -1,0 +1,13 @@
+{
+  "name": "graceful-shutdown-nodejs",
+  "version": "1.0.0",
+  "description": "Node.js HTTP server demonstrating graceful shutdown patterns with background work",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["graceful-shutdown", "nodejs", "http-server"],
+  "author": "",
+  "license": "MIT"
+}
